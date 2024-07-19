@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'onboarding/welcome.dart';
+import 'product/productlisting.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Welcome(),
+      // home: const Welcome(),
+      home: const ProductListing(),
     );
   }
 }
