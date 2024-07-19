@@ -24,7 +24,6 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
         textTheme: textTheme.apply(),
-        // primarySwatch: Colors.deepPurple,
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
