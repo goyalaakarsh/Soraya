@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:soraya/onboarding/signup.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'login.dart';
 
 class Welcome extends StatelessWidget {
@@ -23,6 +24,12 @@ class Welcome extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SvgPicture.asset(
+                'assets/images/welcome_illus.svg',
+                width: 200,
+                height: 200,
+              ),
+              SizedBox(height: 25),
               Text(
                 'Soraya',
                 style: GoogleFonts.kalnia(
@@ -45,7 +52,7 @@ class Welcome extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 60),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -69,7 +76,7 @@ class Welcome extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-              OutlinedButton (
+              OutlinedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
