@@ -8,6 +8,7 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color primaryColor = Theme.of(context).colorScheme.primary;
+    final Color secondaryColor = Theme.of(context).colorScheme.secondary;
 
     return Scaffold(
       appBar: AppBar(
@@ -32,7 +33,7 @@ class ProductDetails extends StatelessWidget {
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.shopping_cart, size: 20, color: Colors.white),
+            icon: Icon(Icons.shopping_bag, size: 20, color: Colors.white),
             onPressed: () {},
           ),
         ],
@@ -61,14 +62,27 @@ class ProductDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: List.generate(5, (index) {
-                        if (index < 4) {
-                          return Icon(Icons.star, color: Colors.orangeAccent, size: 15);
-                        } else {
-                          return Icon(Icons.star_border, color: Colors.yellow, size: 15);
-                        }
-                      }),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: List.generate(5, (index) {
+                            if (index < 4) {
+                              return Icon(Icons.star, color: Colors.orangeAccent, size: 15);
+                            } else {
+                              return Icon(Icons.star_border, color: Colors.yellow, size: 15);
+                            }
+                          }),
+                        ),
+                        Text(
+                          '10k+ Reviews (4⭐)',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+
+                      ],
                     ),
                     SizedBox(height: 15),
                     Text(
@@ -164,57 +178,65 @@ class ProductDetails extends StatelessWidget {
                   color: primaryColor,
                 ),
               ),
-              // Container(
-              //   width: 45,
-              //   height: 45,
-              //   decoration: BoxDecoration(
-              //     shape: BoxShape.rectangle,
-              //     // borderRadius: Border(2, 2, 2, 2),
-              //     color: Colors.white,
-              //     boxShadow: [
-              //       BoxShadow(
-              //         color: Colors.grey.withOpacity(0.5),
-              //         spreadRadius: 1,
-              //         blurRadius: 2,
-              //         offset: Offset(0, 1),
-              //       ),
-              //     ],
-              //   ),
-              //   child: Icon(
-              //     Icons.favorite_border,
-              //     color: Colors.red,
-              //     size: 20,
-              //   ),
-              // ),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: primaryColor,
-                  padding: EdgeInsets.symmetric(horizontal: 11, vertical: 0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    Icon(
-                      Icons.shopping_bag,
-                      size: 24,
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(5),
                       color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 1,
+                          blurRadius: 2,
+                          offset: Offset(0, 1),
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 8),
-                    Text(
-                      'Add to Bag',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white,
+                    child: Icon(
+                      Icons.favorite_border,
+                      color: Colors.red,
+                      size: 20,
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                      padding: EdgeInsets.symmetric(horizontal: 11, vertical: 0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6.0),
                       ),
                     ),
-                  ],
-                ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Icon(
+                          Icons.shopping_bag,
+                          size: 24,
+                          color: Colors.white,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          'Add to Bag',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
+
             ],
           ),
         ),

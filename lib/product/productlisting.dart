@@ -28,21 +28,22 @@ class ProductListing extends StatelessWidget {
             textStyle: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w500,
+              color: Colors.white,
             ),
           ),
         ),
         backgroundColor: primaryColor,
         actions: [
           IconButton(
-            icon: Icon(Icons.search, size: 20),
+            icon: Icon(Icons.search, size: 20, color: Colors.white),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.favorite, size: 20),
+            icon: Icon(Icons.favorite, size: 20, color: Colors.white),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.shopping_cart, size: 20),
+            icon: Icon(Icons.shopping_bag, size: 20, color: Colors.white),
             onPressed: () {},
           ),
         ],
