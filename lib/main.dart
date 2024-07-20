@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'onboarding/welcome.dart';
 import 'product/productlisting.dart';
+import 'product/productdetails.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: const Welcome(),
-      home: const ProductListing(),
+      // home: const ProductListing(),
+      home: const ProductDetails(),
     );
   }
 }
