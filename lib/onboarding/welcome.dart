@@ -26,15 +26,15 @@ class Welcome extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 'assets/images/welcome_illus.svg',
-                width: 200,
-                height: 200,
+                width: 230,
+                height: 230,
               ),
               SizedBox(height: 25),
               Text(
                 'Soraya',
                 style: GoogleFonts.kalnia(
                   textStyle: TextStyle(
-                    fontSize: 35,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                     // color: primaryColor,
@@ -46,13 +46,13 @@ class Welcome extends StatelessWidget {
                 'From Basics to Glam,\nall in one place!',
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
-                    fontSize: 10,
+                    fontSize: 12,
                     color: Colors.grey[850],
                   ),
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 60),
+              SizedBox(height: 70),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -61,14 +61,14 @@ class Welcome extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 95, vertical: 17),
+                  padding: EdgeInsets.symmetric(horizontal: 115, vertical: 17),
                   backgroundColor: primaryColor,
                 ),
                 child: Text(
                   'Login',
                   style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                      fontSize: 13,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
                     ),
@@ -84,7 +84,7 @@ class Welcome extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 90, vertical: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 110, vertical: 16),
                   backgroundColor: secondaryColor,
                   side: BorderSide(color: primaryColor),
                 ),
@@ -92,7 +92,7 @@ class Welcome extends StatelessWidget {
                   'Signup',
                   style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                      fontSize: 13,
+                      fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Colors.grey[900],
                     ),
