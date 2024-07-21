@@ -26,49 +26,31 @@ class MyBag extends StatelessWidget {
         name: 'Long Long Long Long Product Name',
         price: '\$100',
         brand: 'Brand A',
-        image: 'assets/images/m1.png',
+        image: 'assets/images/m3.png',
       ),
       Product(
         name: 'Product 2',
         price: '\$150',
         brand: 'Brand B',
-        image: 'assets/images/m2.png',
+        image: 'assets/images/m4.png',
       ),
       Product(
         name: 'Long Long Long Long Product Name',
         price: '\$100',
         brand: 'Brand A',
-        image: 'assets/images/m1.png',
+        image: 'assets/images/m5.png',
       ),
       Product(
         name: 'Product 2',
         price: '\$150',
         brand: 'Brand B',
-        image: 'assets/images/m2.png',
+        image: 'assets/images/m6.png',
       ),
       Product(
         name: 'Long Long Long Long Product Name',
         price: '\$100',
         brand: 'Brand A',
-        image: 'assets/images/m1.png',
-      ),
-      Product(
-        name: 'Product 2',
-        price: '\$150',
-        brand: 'Brand B',
-        image: 'assets/images/m2.png',
-      ),
-      Product(
-        name: 'Long Long Long Long Product Name',
-        price: '\$100',
-        brand: 'Brand A',
-        image: 'assets/images/m1.png',
-      ),
-      Product(
-        name: 'Product 2',
-        price: '\$150',
-        brand: 'Brand B',
-        image: 'assets/images/m2.png',
+        image: 'assets/images/m7.png',
       ),
     ];
 
@@ -139,7 +121,7 @@ class MyBag extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 1,
               blurRadius: 2,
-              offset: Offset(0, -1),
+              offset: Offset(0, 1),
             ),
           ],
         ),
@@ -163,12 +145,6 @@ class MyBag extends StatelessWidget {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: const [
-                        // Icon(
-                        //   Icons.shopping_bag,
-                        //   size: 24,
-                        //   color: Colors.white,
-                        // ),
-                        // SizedBox(width: 8),
                         Text(
                           'Proceed to Checkout',
                           style: TextStyle(
@@ -209,15 +185,15 @@ class ProductCard extends StatelessWidget {
         child: Card(
           elevation: 5,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(15.0),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.fromLTRB(10, 10, 5, 10),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(5.0),
+                  borderRadius: BorderRadius.circular(10.0),
                   child: Image.asset(
                     product.image,
                     fit: BoxFit.cover,
