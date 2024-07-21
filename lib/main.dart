@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'onboarding/welcome.dart';
 import 'product/productlisting.dart';
 import 'product/productdetails.dart';
+import 'profile/mybag.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: const Welcome(),
       // home: const ProductListing(),
-      home: const ProductDetails(),
+      // home: const ProductDetails(),
+      home: const MyBag(),
     );
   }
 }
