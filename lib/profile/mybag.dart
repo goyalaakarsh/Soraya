@@ -146,6 +146,7 @@ class MyBag extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: const [
                         Text(
+
                           'Proceed to Checkout',
                           style: TextStyle(
                             fontSize: 18,
@@ -319,7 +320,7 @@ class _IncrementDecrementButtonState extends State<IncrementDecrementButton> {
       height: 30,
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(30),
         color: Theme.of(context).colorScheme.secondary,
         boxShadow: [
           BoxShadow(
