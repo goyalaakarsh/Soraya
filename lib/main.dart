@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:soraya/profile/mywishlist.dart';
 import 'onboarding/welcome.dart';
 import 'onboarding/signup.dart';
 import 'product/productlisting.dart';
+import 'product/productdetails.dart';
+import 'profile/mybag.dart';
+import 'profile/myorders.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -29,6 +33,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: const Welcome(),
+      // home: const ProductListing(),
+      // home: const ProductDetails(),
+      home: const MyBag(),
+      // home: const MyWishlist(),
+      // home: const MyOrders(),
       // home: const ProductListing(),
       home: const Signup(),
     );
