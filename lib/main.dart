@@ -7,6 +7,8 @@ import 'product/productdetails.dart';
 import 'profile/mybag.dart';
 import 'profile/myorders.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'onboarding/login.dart';
+import 'home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,11 +37,13 @@ class MyApp extends StatelessWidget {
       // home: const Welcome(),
       // home: const ProductListing(),
       // home: const ProductDetails(),
-      home: const MyBag(),
+      // home: const MyBag(),
       // home: const MyWishlist(),
       // home: const MyOrders(),
       // home: const ProductListing(),
-      home: const Signup(),
+      // home: const Signup(),
+      // home: const Login(),
+      home: const Home(),
     );
   }
 }
