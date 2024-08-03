@@ -1,6 +1,7 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-  import 'login.dart';
+import 'login.dart';
+import 'package:soraya/home.dart';
 
   class Signup extends StatelessWidget {
     const Signup({super.key});
@@ -213,7 +214,7 @@ class SignupForm extends StatefulWidget {
           child: Text('Register',style: TextStyle(color: Colors.white),),
           onPressed: ()
           {
-            print('The button was clicked!');
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Home()),);
           },),
            Row(            
             mainAxisAlignment: MainAxisAlignment.center,

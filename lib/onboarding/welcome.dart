@@ -43,7 +43,7 @@ class Welcome extends StatelessWidget {
               ),
               SizedBox(height: 2),
               Text(
-                'From Basics to Glam,\nall in one place!',
+                'From Basics to Glam, \nall in one place!',
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     fontSize: 12,

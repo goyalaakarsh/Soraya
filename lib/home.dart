@@ -111,6 +111,35 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment:CrossAxisAlignment.start,
       children: [
         SizedBox(height: 7,),
+        Container(child: Text('Categories', style: TextStyle(fontSize: 18, fontWeight:FontWeight.bold ),),),
+        Container(
+          height: 100,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: Titles.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                     children: [
+                       CircleAvatar(
+                        backgroundColor: const Color(0xFFFFC4D6),
+                        child: Text(
+                          Titles[index][0],
+                          style: TextStyle(color: Colors.white),
+                        ),),
+                         SizedBox(height: 5),
+
+                      Text(Titles[index]),              
+                     ],
+                   ),
+                 );
+            },
+          ),
+        ),
+        // SizedBox(height: 12),
+        
         Container(
           height: 150,
           child: PageView(
@@ -119,10 +148,13 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                 color: Color.fromARGB(232, 170, 64, 241), 
                 borderRadius: BorderRadius.circular(12), ), 
-                child: Center(
-                  child: Text(
-                    "Ad 1",
-                    style: TextStyle(color: Colors.white),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    'https://media.istockphoto.com/id/1331637318/photo/portrait-of-young-afro-woman-with-bright-make-up.webp?b=1&s=612x612&w=0&k=20&c=rZ_u98MijTqyHRQsEJKiu_fzj9NlOqkFcrLhwbhl_Ts=',
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: double.infinity,
                   ),
                 ),
               ),
@@ -153,33 +185,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         SizedBox(height: 20),
-        Container(child: Text('Categories', style: TextStyle(fontSize: 18, fontWeight:FontWeight.bold ),),),
-        Container(
-          height: 100,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: Titles.length,
-            itemBuilder: (context, index) {
-              return Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                     children: [
-                       CircleAvatar(
-                        backgroundColor: const Color(0xFFFFC4D6),
-                        child: Text(
-                          Titles[index][0],
-                          style: TextStyle(color: Colors.white),
-                        ),),
-                         SizedBox(height: 5),
-
-                      Text(Titles[index]),              
-                     ],
-                   ),
-                 );
-            },
-          ),
-        ),
+        
         Container(
           child: Text('Featured', style: TextStyle(fontSize: 18, fontWeight:FontWeight.bold ),),
         ),
