@@ -9,6 +9,7 @@ import 'profile/myorders.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'onboarding/login.dart';
 import 'home.dart';
+import 'profile/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
       // home: const Signup(),
       home: const Login(),
       // home: const Home(),
+      // home: const profile(),
     );
   }
 }

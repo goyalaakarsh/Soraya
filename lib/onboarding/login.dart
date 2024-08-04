@@ -146,15 +146,37 @@ SizedBox(height: 20,),
                   ),
               ),
               SizedBox(height: 22),  
-              ElevatedButton( style: ButtonStyle(
-              minimumSize: WidgetStateProperty.all(Size(250, 47)),
-              backgroundColor: WidgetStatePropertyAll(primaryColor),
+              Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [primaryColor, secondaryColor],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(22.0),
+              ),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(250, 47),
+                  backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(22.0),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Home()),
+                  );
+                },
+                child: Text(
+                  'Login',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
-          child: Text('Login',style: TextStyle(color: Colors.white),),
-          onPressed: ()
-          {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Home()),);
-          },),
+
 
           Row(            
             mainAxisAlignment: MainAxisAlignment.center,
