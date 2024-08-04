@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: const Welcome(),
+      home: const Welcome(),
       // home: const ProductListing(),
       // home: const ProductDetails(),
       // home: const MyBag(),
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       // home: const MyOrders(),
       // home: const ProductListing(),
       // home: const Signup(),
-      home: const Login(),
+      // home: const Login(),
       // home: const Home(),
       // home: const profile(),
     );

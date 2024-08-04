@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import './../product/productdetails.dart';
+import 'mywishlist.dart';
 
 class MyBag extends StatelessWidget {
   const MyBag({Key? key}) : super(key: key);
@@ -74,7 +75,9 @@ class MyBag extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(Icons.favorite, size: 20, color: Colors.white),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MyWishlist()),);
+            },
           ),
           IconButton(
             icon: Icon(Icons.shopping_bag, size: 20, color: Colors.white),

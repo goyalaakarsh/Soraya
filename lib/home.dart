@@ -1,5 +1,7 @@
 import 'dart:ui';
-
+import 'profile/mywishlist.dart';
+import 'profile/mybag.dart';
+import 'profile/profile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -26,14 +28,18 @@ class Home extends StatelessWidget {
         backgroundColor: primaryColor,
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyWishlist()),);
+              },
               icon: Icon(Icons.favorite, size: 20, color: Colors.white)),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyBag()),);
+              },
               icon: Icon(Icons.shopping_bag, size: 20, color: Colors.white)),
           IconButton(
               onPressed: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalProfile()),);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => profile()),);
               },
               icon:
                   Icon(Icons.account_circle_rounded, size: 20, color: Colors.white)),
