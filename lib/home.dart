@@ -129,15 +129,28 @@ class _HomePageState extends State<HomePage> {
                    child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                      children: [
-                       CircleAvatar(
-                        backgroundColor: const Color(0xFFFFC4D6),
-                        child: Text(
-                          Titles[index][0],
-                          style: TextStyle(color: Colors.white),
-                        ),),
-                         SizedBox(height: 5),
-
-                      Text(Titles[index]),              
+                       Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(22),
+                      ),
+                      elevation: 3,
+                      child: Container(
+                        width: 40,
+                        height: 40,
+                        child: Center(
+                          child: Text(
+                            Titles[index][0],
+                            style: TextStyle(color: Colors.white, fontSize: 24),
+                          ),
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(22),
+                          color: const Color(0xFFFFC4D6),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Text(Titles[index]),             
                      ],
                    ),
                  );

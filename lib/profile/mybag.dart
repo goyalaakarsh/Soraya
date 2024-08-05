@@ -55,6 +55,27 @@ class MyBag extends StatelessWidget {
       ),
     ];
 
+
+    void _showOrderSuccessDialog(BuildContext context) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Order Status'),
+            content: Text('Order Successfully Placed!'),
+            actions: <Widget>[
+              TextButton(
+                child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -137,7 +158,7 @@ class MyBag extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {_showOrderSuccessDialog(context);},
                     style: ElevatedButton.styleFrom(
                       backgroundColor: primaryColor,
                       padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
@@ -174,6 +195,7 @@ class ProductCard extends StatelessWidget {
   final Product product;
 
   const ProductCard({Key? key, required this.product}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -278,6 +300,8 @@ class ProductCard extends StatelessWidget {
     );
   }
 }
+
+
 
 class Product {
   final String name;

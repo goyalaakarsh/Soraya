@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:soraya/profile/mybag.dart';
+import 'package:soraya/profile/mywishlist.dart';
 
 
 class profile extends StatelessWidget{
@@ -54,7 +56,8 @@ class profile extends StatelessWidget{
   class _profilePageState extends State<profilePage> {
 
     final List<String> Info =['Personal Details','My Orders','My Wishlist','Shipping Address','My Card','Settings'];
-    
+    final List<Widget> pages = [profile(), MyBag(), MyWishlist(), profile(), profile(), profile(),
+];
     @override
     Widget build(BuildContext context){
       final Color primaryColor = Theme.of(context).colorScheme.primary;
@@ -64,12 +67,11 @@ class profile extends StatelessWidget{
           children: [
             SizedBox(height: 20,),
             Container(
-              child: Text('My Profile',style:  GoogleFonts.kalnia(
-            textStyle: TextStyle(
+              child: Text('My Profile',style: TextStyle(
               fontSize: 33,
               fontWeight: FontWeight.w600,
               color: primaryColor,
-            ),),
+            ),
             ),),
             SizedBox(height: 35,),
             Padding(
@@ -145,10 +147,10 @@ class profile extends StatelessWidget{
                   ),
                 ),
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => Home()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => pages[index]),
+                  );
                 },
                 child: Text(
                   Info[index],
